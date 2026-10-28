@@ -1,0 +1,2 @@
+mob_levels
+; Marks the Monster Levels add-on as installed. Removed again with the add-on.

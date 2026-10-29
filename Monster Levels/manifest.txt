@@ -1,6 +1,6 @@
 ; Update list for Monster Levels. Upload this next to mod.ini and the files folder.
-version=1.2
-79c2ccb498cddaaad73986118b13d5b616bc1860|mod.ini
+version=1.3
+ea5e193232555a91c0e667100d0862d9f2c48118|mod.ini
 bb5b96884f1296bdb5ac94072e5f22c7a560d4a3|files/Data/ui/sp_addons/mob_levels.txt
-e53b15d018307532a38cf633bd4749ec7f3aba1b|files/Data/ui/themes/rose/game/monster_nameplates.html
+7d3edb7bd3713f5c44a78ff244b5cacc80bb238d|files/Data/ui/themes/rose/game/monster_nameplates.html
 cfe4c3a63e20ee55e3b512b3366654398eafeeed|files/Data/ui/themes/rose/game/options_bgfx.html

@@ -16,7 +16,7 @@
             /* Monster Levels add-on: the level line above the name (absolute, so the name stays where the game puts it).
                It is a read-only text box: it draws its own text, so filling it in never creates new
                text elements (which made the game log "No font face defined"). */
-            .monster-nameplate .sp-mob-lv { position: absolute; bottom: 100%; left: 0; width: 100%; height: 1.1em; padding: 0; margin: 0; decorator: none; background: transparent; border: 0; font-size: 0.75em; line-height: 1.1em; color: rgb(255, 224, 102); text-align: center; font-effect: outline(1dp black); pointer-events: none; tab-index: none; }
+            .monster-nameplate .sp-mob-lv { position: absolute; bottom: 100%; left: 0; width: 100%; height: 1.1em; padding: 0; margin: 0; decorator: none; background: transparent; border: 0; font-family: Nunito; font-weight: 800; font-size: 0.75em; line-height: 1.1em; color: rgb(255, 224, 102); text-align: center; font-effect: outline(1dp black); pointer-events: none; tab-index: none; }
             #monster-nameplates.sp-mlv-off .sp-mob-lv { display: none; }
             @keyframes sp-mlv-tick-a { from { opacity: 0; } to { opacity: 0; } }
             @keyframes sp-mlv-tick-b { from { opacity: 0; } to { opacity: 0; } }

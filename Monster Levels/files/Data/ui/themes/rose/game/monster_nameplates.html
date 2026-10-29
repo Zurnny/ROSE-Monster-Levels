@@ -13,8 +13,10 @@
             .monster-nameplate.detailed { margin-top: -44dp; }
             .monster-marker:not(.generic) { position: absolute; height: 18dp; top: 50%; margin-top: -9dp; }
             .monster-debug { position: absolute; bottom: 100%; width: 100%; font-size: 10dp; color: yellow; }
-            /* Monster Levels add-on: the level line above the name (absolute, so the name stays where the game puts it) */
-            .monster-nameplate .sp-mob-lv { position: absolute; bottom: 100%; left: 0; width: 100%; text-align: center; font-size: 0.75em; color: rgb(255, 224, 102); font-effect: outline(1dp black); pointer-events: none; }
+            /* Monster Levels add-on: the level line above the name (absolute, so the name stays where the game puts it).
+               It is a read-only text box: it draws its own text, so filling it in never creates new
+               text elements (which made the game log "No font face defined"). */
+            .monster-nameplate .sp-mob-lv { position: absolute; bottom: 100%; left: 0; width: 100%; height: 1.1em; padding: 0; margin: 0; decorator: none; background: transparent; border: 0; font-size: 0.75em; line-height: 1.1em; color: rgb(255, 224, 102); text-align: center; font-effect: outline(1dp black); pointer-events: none; tab-index: none; }
             #monster-nameplates.sp-mlv-off .sp-mob-lv { display: none; }
             @keyframes sp-mlv-tick-a { from { opacity: 0; } to { opacity: 0; } }
             @keyframes sp-mlv-tick-b { from { opacity: 0; } to { opacity: 0; } }
@@ -1166,7 +1168,7 @@ pcall(function()
             local name = e:GetAttribute('sp-name') or ''
             local want = LEVELS[name] or LEVELS[(name:gsub('%s*%b()%s*$', ''))] or ''
             if e:GetAttribute('sp-shown') ~= want then
-                e.inner_rml = want
+                e:SetAttribute('value', want)
                 e:SetAttribute('sp-shown', want)
             end
         end)
@@ -1262,7 +1264,7 @@ end)
         <div id="monster-nameplates-root" data-model="monster-nameplates" data-style-font-size="font_size + 'dp'">
         <div class="monster-nameplate" data-for="plate : nameplates" data-if="plate.visible" data-class-detailed="plate.detailed"
              data-style-left="plate.x + 'px'" data-style-top="plate.y + 'px'" data-style-transform="plate.transform" data-style-color="plate.color">
-            <span class="sp-mob-lv" data-attr-sp-name="plate.name"></span>
+            <input class="sp-mob-lv" type="text" readonly="" value="" data-attr-sp-name="plate.name" />
             <div class="monster-name-line"><span class="monster-name">{{plate.name}}</span><img class="monster-marker left" data-if="plate.show_left" data-class-generic="plate.generic" data-attr-sprite="plate.left_sprite"/><img class="monster-marker right" data-if="plate.show_right" data-class-generic="plate.generic" data-class-mirrored="plate.mirrored" data-attr-sprite="plate.right_sprite"/></div>
             <gauge class="monster-health horizontal-sm-md red" animation-enabled="false" data-if="plate.show_health" data-attr-gmax="plate.max_hp" data-attr-gvalue="plate.hp"/>
             <div class="monster-debug" data-if="plate.show_debug">{{plate.debug_info}}</div>

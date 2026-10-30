@@ -1,12 +1,12 @@
 ; Update list for Monster Levels. Upload this next to mod.ini and the files folder.
-version=1.7
-6be7fec6a3c3384dfd0539c2b81607c2ad8a7fb3|mod.ini
+version=1.8
+22a19b0b93b6e25dcda03c1e87c90e6ce212a7d2|mod.ini
 bb5b96884f1296bdb5ac94072e5f22c7a560d4a3|files/Data/ui/sp_addons/mob_levels.txt
 6956823d2457089b22f7ac755fb61d78bd95db8b|files/Data/ui/sp_mob_levels.txt
 f73e3ff2449c21cd26b382a0d965ad68ce2c7387|files/Data/ui/themes/rose/game/menu.html
 af99f0ec2b4d8913ea87ef8f4cdeadee9e7622de|files/Data/ui/themes/rose/game/monster_nameplates.html
 4afc0dd827e57b69b5a89fb34676c6c7ec0f575a|files/Data/ui/themes/rose/game/options_bgfx.html
 df14c61c9712375fdda896285ee26c97d7c1ebd0|files/Data/ui/themes/rose/game/sp_addons_window.html
-b7a6f192c058d23543410947e501b6cbf3e0b369|files/Data/ui/themes/rose/imgs/sp_addons_menu.dds
+9b1164d2e102c0a3a8300ea35dc61ec311b3420f|files/Data/ui/themes/rose/imgs/sp_addons_menu.dds
 c9735755117dd4fa76a010d9d13085fefdd2dfb1|files/Data/ui/themes/rose/styles/sp_addons_steampunk.css
 d91eeca9018f74fcc0129e8769899178111feb8f|files/Data/ui/themes/rose/styles/sp_addons_steampunk_sprites.css
